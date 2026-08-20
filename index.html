@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Politique de confidentialité de MatPad, application iPad d’apprentissage des opérations posées et de saisie de tableaux.">
+  <meta name="color-scheme" content="light">
+  <title>Politique de confidentialité — MatPad</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232E73D1'/%3E%3Cpath fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round' d='M18 32h28M32 18v28'/%3E%3Cpath fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round' d='M22 42l20-20'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --purple: #33004f;
+      --purple-soft: rgba(51, 0, 79, 0.82);
+      --blue: #2e73d1;
+      --paper: #e6f0ff;
+      --card: #f0f7ff;
+      --white: #ffffff;
+      --line: rgba(46, 115, 209, 0.18);
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(51, 0, 79, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--purple);
+      background:
+        radial-gradient(1200px 400px at 10% -10%, rgba(46, 115, 209, 0.14), transparent 55%),
+        radial-gradient(900px 360px at 100% 0%, rgba(51, 0, 79, 0.08), transparent 50%),
+        var(--white);
+      font-family: ui-rounded, "SF Pro Rounded", "Hiragino Maru Gothic ProN", "Segoe UI", system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      font-size: 1.05rem;
+    }
+
+    a {
+      color: var(--blue);
+    }
+
+    .skip {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      background: var(--purple);
+      color: var(--white);
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      z-index: 10;
+    }
+
+    .skip:focus {
+      top: 1rem;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+    }
+
+    .header-inner,
+    main,
+    footer .footer-inner {
+      width: min(760px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--blue);
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .logo svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.05rem;
+    }
+
+    .brand strong {
+      font-size: 1.15rem;
+      letter-spacing: 0.01em;
+    }
+
+    .brand span {
+      color: var(--blue);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    main {
+      padding: 2.4rem 0 3.5rem;
+    }
+
+    .hero {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1.7rem 1.6rem 1.5rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 1.6rem;
+    }
+
+    h1 {
+      margin: 0 0 0.45rem;
+      font-size: clamp(1.7rem, 4vw, 2.25rem);
+      line-height: 1.2;
+    }
+
+    .lede {
+      margin: 0 0 1rem;
+      color: var(--purple-soft);
+      font-size: 1.05rem;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      background: var(--white);
+      color: var(--blue);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.28rem 0.75rem;
+      font-size: 0.88rem;
+      font-weight: 650;
+    }
+
+    nav.toc {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.15rem 1.3rem 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    nav.toc h2 {
+      margin: 0 0 0.7rem;
+      font-size: 1rem;
+    }
+
+    nav.toc ol {
+      margin: 0;
+      padding-left: 1.2rem;
+      columns: 1;
+      gap: 1.5rem;
+    }
+
+    nav.toc a {
+      text-decoration: none;
+      color: var(--purple-soft);
+    }
+
+    nav.toc a:hover,
+    nav.toc a:focus {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
+    article section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.35rem 1.35rem;
+      margin: 0 0 1rem;
+    }
+
+    article h2 {
+      margin: 0 0 0.7rem;
+      font-size: 1.22rem;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 0.85rem;
+    }
+
+    article p:last-child,
+    article ul:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0 0 0.85rem;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 0.28rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--purple-soft);
+    }
+
+    .footer-inner {
+      padding: 1.2rem 0 1.6rem;
+      font-size: 0.92rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (min-width: 680px) {
+      nav.toc ol {
+        columns: 2;
+      }
+
+      .hero,
+      article section,
+      nav.toc {
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      body {
+        font-size: 1rem;
+      }
+
+      .header-inner,
+      main,
+      footer .footer-inner {
+        width: min(760px, calc(100% - 1.4rem));
+      }
+
+      main {
+        padding-top: 1.5rem;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      header,
+      nav.toc,
+      footer {
+        break-inside: avoid;
+      }
+
+      article section {
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none">
+          <path d="M5 12h14M12 5v14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M7 17L17 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="brand">
+        <strong>MatPad</strong>
+        <span>Application éducative pour iPad</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <div class="hero">
+      <h1>Politique de confidentialité</h1>
+      <p class="lede">Cette page décrit la manière dont l’application MatPad traite les informations, d’après son fonctionnement actuel. Elle concerne uniquement l’application elle-même, telle qu’elle est fournie sur iPad.</p>
+      <div class="meta">
+        <span class="chip">Dernière mise à jour : 21 août 2026</span>
+        <span class="chip">Version 1.0</span>
+      </div>
+    </div>
+
+    <nav class="toc" aria-label="Sommaire">
+      <h2>Sommaire</h2>
+      <ol>
+        <li><a href="#presentation">Présentation de l’application</a></li>
+        <li><a href="#responsable">Responsable du traitement</a></li>
+        <li><a href="#donnees">Données concernées</a></li>
+        <li><a href="#compte">Compte et authentification</a></li>
+        <li><a href="#finalites">Finalités</a></li>
+        <li><a href="#stockage">Stockage et conservation</a></li>
+        <li><a href="#transmission">Transmission et API</a></li>
+        <li><a href="#tiers">Services tiers</a></li>
+        <li><a href="#permissions">Cookies, identifiants et permissions</a></li>
+        <li><a href="#securite">Sécurité</a></li>
+        <li><a href="#droits">Droits des utilisateurs</a></li>
+        <li><a href="#suppression">Accès, rectification et suppression</a></li>
+        <li><a href="#mineurs">Données des mineurs</a></li>
+        <li><a href="#modifications">Modifications de la politique</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <section id="presentation">
+        <h2>1. Présentation de l’application</h2>
+        <p>MatPad est une application éducative destinée à l’iPad. Elle permet de poser des opérations (addition, soustraction, multiplication et division), de remplir des tableaux, de consulter des tableaux de conversion d’unités, de vérifier un résultat lorsque cette option est activée, et d’exporter un exercice en fichier JPG ou PDF.</p>
+        <p>L’application fonctionne localement sur l’appareil. Elle n’a pas de site de compte, de serveur applicatif ni de backend propre.</p>
+      </section>
+
+      <section id="responsable">
+        <h2>2. Responsable du traitement</h2>
+        <p>L’éditeur et responsable du traitement est LSC Informatique.</p>
+        <p>E-mail de contact : <a href="mailto:contact@lscinformatique.fr">contact@lscinformatique.fr</a></p>
+      </section>
+
+      <section id="donnees">
+        <h2>3. Données concernées</h2>
+        <p>MatPad ne collecte pas, dans son code actuel, de nom, d’adresse e-mail, de numéro de téléphone, de localisation, de contacts, de photos, de données de santé, d’identifiant publicitaire ou d’identifiant de compte.</p>
+        <p>Pendant l’utilisation, l’application conserve uniquement en mémoire le contenu nécessaire à l’écran en cours :</p>
+        <ul>
+          <li>les nombres saisis pour les opérations (opérandes, retenues, résultats, lignes intermédiaires) ;</li>
+          <li>le texte éventuellement saisi dans les cases des tableaux ;</li>
+          <li>les réglages d’affichage de la session (vérification du calcul, coloration des colonnes ou des chiffres, taille des cases et du texte, mise en forme du tableau).</li>
+        </ul>
+        <p>Si vous tapez des informations personnelles dans un tableau (par exemple un nom d’élève), ce contenu est traité localement comme n’importe quel autre texte saisi. L’application n’a pas besoin de telles informations pour fonctionner.</p>
+      </section>
+
+      <section id="compte">
+        <h2>4. Compte et authentification</h2>
+        <p>MatPad ne crée pas de compte utilisateur. Elle ne demande pas d’identifiant, de mot de passe, d’adresse e-mail ni de connexion à un service d’authentification.</p>
+      </section>
+
+      <section id="finalites">
+        <h2>5. Finalités</h2>
+        <p>Les informations mentionnées ci-dessus sont utilisées uniquement pour :</p>
+        <ul>
+          <li>afficher et modifier les opérations ou les tableaux ;</li>
+          <li>vérifier un résultat lorsque vous activez l’option correspondante ;</li>
+          <li>exporter un exercice en fichier JPG ou PDF, si vous le demandez ;</li>
+          <li>écrire temporairement ce fichier sur l’appareil afin de l’ouvrir dans la feuille de partage d’iPadOS.</li>
+        </ul>
+        <p>Aucune de ces finalités ne sert, dans l’application, à de la publicité, à du profilage ou à de la mesure d’audience.</p>
+      </section>
+
+      <section id="stockage">
+        <h2>6. Stockage et durée de conservation</h2>
+        <p>Les saisies et les réglages restent dans la mémoire vive de l’application pendant la session. Ils ne sont pas enregistrés dans une base de données, ni dans les préférences de l’appareil (UserDefaults), ni dans Core Data, SwiftData, le trousseau (Keychain) ou iCloud, ni sur un serveur. Ils disparaissent lorsque vous effacez l’exercice, quittez l’application ou que le système la retire de la mémoire.</p>
+        <p>Si vous exportez un document, un fichier JPG ou PDF est écrit dans le dossier temporaire de l’appareil, puis proposé via la feuille de partage du système. Le nom du fichier contient un horodatage technique. La durée exacte de conservation de ce fichier temporaire dépend d’iPadOS, qui peut le supprimer automatiquement. L’application ne prévoit pas d’archivage durable de ces exports.</p>
+      </section>
+
+      <section id="transmission">
+        <h2>7. Transmission des données et API</h2>
+        <p>L’application n’envoie aucune donnée vers un serveur distant : aucun appel réseau n’est présent dans son code. Elle n’utilise pas d’API tierce ni d’API propre à MatPad.</p>
+        <p>Une transmission ne peut avoir lieu que si vous exportez un document, puis choisissez vous-même une destination dans la feuille de partage d’iPadOS (Fichiers, Mail, une autre application, etc.). Dans ce cas, le contenu de l’export est communiqué à la destination que vous avez sélectionnée. Le traitement ultérieur relève alors de cette destination et de ses propres règles.</p>
+      </section>
+
+      <section id="tiers">
+        <h2>8. Services tiers</h2>
+        <p>MatPad n’intègre pas de kit publicitaire, d’outil d’analyse d’audience, de journalisation distante, de connexion à un réseau social ou de service infonuagique.</p>
+        <p>L’application s’appuie uniquement sur des fonctions fournies par le système Apple, notamment l’affichage, le rendu d’image ou de PDF, le dossier temporaire de l’appareil et la feuille de partage d’iPadOS.</p>
+      </section>
+
+      <section id="permissions">
+        <h2>9. Cookies, identifiants et permissions</h2>
+        <p>MatPad n’utilise pas de cookies, de stockage web, de session en ligne ni de base IndexedDB.</p>
+        <p>L’application ne demande pas d’accès à la caméra, au micro, à la localisation, aux contacts ou au suivi publicitaire. Le partage d’un export s’effectue par le mécanisme standard d’iPadOS, selon la destination que vous choisissez.</p>
+      </section>
+
+      <section id="securite">
+        <h2>10. Sécurité</h2>
+        <p>Les calculs et les tableaux sont traités localement sur l’appareil. L’application s’exécute dans l’environnement isolé (bac à sable) prévu par le système.</p>
+        <p>Comme pour toute application installée sur un iPad, la protection concrète dépend aussi du verrouillage de l’appareil, des mises à jour d’iPadOS et des applications avec lesquelles vous partagez éventuellement un export.</p>
+      </section>
+
+      <section id="droits">
+        <h2>11. Droits des utilisateurs</h2>
+        <p>Selon la réglementation applicable, vous pouvez notamment disposer d’un droit d’accès, de rectification, d’effacement, de limitation, d’opposition, ainsi que, le cas échéant, d’un droit à la portabilité et du droit d’introduire une réclamation auprès d’une autorité de contrôle (en France, la CNIL).</p>
+        <p>Dans MatPad, les données de travail restent sur l’appareil et ne sont pas transmises à l’éditeur par l’application. Vous pouvez donc, en pratique, modifier ou effacer le contenu affiché, supprimer un fichier exporté que vous avez enregistré, ou désinstaller l’application.</p>
+      </section>
+
+      <section id="suppression">
+        <h2>12. Accès, rectification et suppression</h2>
+        <p>Pour consulter ou modifier les informations affichées, utilisez directement l’écran de l’application.</p>
+        <p>Pour effacer le calcul ou le tableau en cours, utilisez le bouton d’effacement dans la barre supérieure de l’application.</p>
+        <p>Pour supprimer l’application et les données qui lui sont associées sur l’appareil, utilisez la procédure standard d’iPadOS.</p>
+        <p>Les fichiers que vous avez vous-même enregistrés ou envoyés via la feuille de partage ne sont pas contrôlés par MatPad : il vous appartient de les supprimer dans l’application ou l’emplacement concernés.</p>
+        <p>Pour une demande concernant d’autres traitements éventuels réalisés en dehors de l’application, contactez l’éditeur à l’adresse indiquée à la section 15. Merci d’indiquer l’objet de la demande et, si besoin, l’appareil ou le document concerné.</p>
+      </section>
+
+      <section id="mineurs">
+        <h2>13. Données des mineurs</h2>
+        <p>MatPad est une application éducative. Elle peut donc être utilisée par des élèves, y compris des mineurs, par exemple dans un cadre scolaire ou familial.</p>
+        <p>L’application ne met pas en place de compte, de chat, de publicité ciblée ni de collecte d’identité. Elle n’a pas besoin d’informations permettant d’identifier un enfant pour fonctionner.</p>
+        <p>Un adulte responsable peut toutefois veiller à ce qu’aucun renseignement personnel inutile ne soit saisi dans les tableaux, et à ce que les exports ne soient partagés qu’avec des destinataires appropriés.</p>
+      </section>
+
+      <section id="modifications">
+        <h2>14. Modifications de la politique</h2>
+        <p>Cette politique peut être mise à jour si le fonctionnement de MatPad change, par exemple en cas d’ajout d’un compte, d’un serveur ou d’un service tiers. La date de dernière mise à jour figure en tête de cette page.</p>
+      </section>
+
+      <section id="contact">
+        <h2>15. Contact</h2>
+        <p>Pour toute question relative à cette politique ou pour exercer vos droits, contactez l’éditeur à l’adresse suivante :</p>
+        <p><a href="mailto:contact@lscinformatique.fr">contact@lscinformatique.fr</a></p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>MatPad — Politique de confidentialité — Dernière mise à jour : 21 août 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
