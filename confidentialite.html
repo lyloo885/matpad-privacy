@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Politique de confidentialité de MatPad, application éducative native pour iPad éditée par LSC Informatique.">
+  <meta name="color-scheme" content="light">
+  <title>Politique de confidentialité — MatPad</title>
+  <style>
+    :root {
+      --purple: #4b1f7a;
+      --purple-deep: #321452;
+      --blue: #2b6fd6;
+      --ink: #2c2438;
+      --muted: #5d5568;
+      --paper: #f4efe6;
+      --sheet: #fffcf7;
+      --card: #ffffff;
+      --line: rgba(75, 31, 122, 0.12);
+      --shadow: 0 18px 50px rgba(50, 20, 82, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 420px at 8% -8%, rgba(43, 111, 214, 0.16), transparent 58%),
+        radial-gradient(740px 380px at 100% 0%, rgba(75, 31, 122, 0.12), transparent 52%),
+        var(--paper);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    footer a {
+      color: inherit;
+    }
+
+    footer a:hover,
+    footer a:focus-visible {
+      color: var(--purple);
+    }
+
+    a:hover,
+    a:focus-visible {
+      color: var(--purple);
+    }
+
+    .skip {
+      position: absolute;
+      left: 1rem;
+      top: -4rem;
+      z-index: 10;
+      background: var(--purple-deep);
+      color: #fff;
+      padding: 0.55rem 0.9rem;
+      border-radius: 10px;
+    }
+
+    .skip:focus {
+      top: 1rem;
+    }
+
+    .page {
+      width: min(820px, calc(100% - 2rem));
+      margin: 1.6rem auto 2.4rem;
+    }
+
+    .sheet {
+      background: var(--sheet);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .masthead {
+      padding: 2.1rem 2rem 1.7rem;
+      background:
+        linear-gradient(180deg, rgba(43, 111, 214, 0.07), transparent 70%),
+        var(--sheet);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      margin: 0 0 0.85rem;
+      color: var(--purple);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 0.7rem;
+      color: var(--purple-deep);
+      font-size: clamp(1.7rem, 4.4vw, 2.35rem);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .updated {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .intro {
+      margin: 0;
+      max-width: 62ch;
+      color: var(--muted);
+    }
+
+    .toc {
+      margin: 1.35rem 0 0;
+      padding: 1.05rem 1.15rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .toc h2 {
+      margin: 0 0 0.55rem;
+      font-size: 0.92rem;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 1.2rem;
+      columns: 1;
+      gap: 1.4rem;
+    }
+
+    .toc a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .toc a:hover,
+    .toc a:focus-visible {
+      color: var(--blue);
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 0.4rem 2rem 2.2rem;
+    }
+
+    section {
+      padding: 1.55rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-of-type {
+      border-bottom: 0;
+      padding-bottom: 0.4rem;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      color: var(--purple-deep);
+      font-size: 1.18rem;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 0.85rem;
+    }
+
+    p:last-child,
+    ul:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0 0 0.85rem;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 0.28rem;
+    }
+
+    .card {
+      margin-top: 0.9rem;
+      padding: 1rem 1.1rem;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    footer {
+      padding: 1.05rem 2rem 1.3rem;
+      background: rgba(43, 111, 214, 0.05);
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (min-width: 720px) {
+      .page {
+        margin-top: 2.4rem;
+        margin-bottom: 3rem;
+      }
+
+      .masthead,
+      main,
+      footer {
+        padding-left: 2.6rem;
+        padding-right: 2.6rem;
+      }
+
+      .masthead {
+        padding-top: 2.5rem;
+      }
+
+      .toc ol {
+        columns: 2;
+      }
+
+      section {
+        padding: 1.85rem 0;
+      }
+    }
+
+    @media (max-width: 519px) {
+      body {
+        font-size: 1rem;
+      }
+
+      .page {
+        width: min(820px, calc(100% - 1.2rem));
+        margin-top: 0.9rem;
+      }
+
+      .sheet {
+        border-radius: 20px;
+      }
+
+      .masthead,
+      main,
+      footer {
+        padding-left: 1.15rem;
+        padding-right: 1.15rem;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        margin: 0;
+      }
+
+      .sheet {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .toc {
+        break-inside: avoid;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <div class="page">
+    <div class="sheet">
+      <header class="masthead">
+        <p class="brand"><a href="index.html">← MatPad — Accueil</a></p>
+        <h1>Politique de confidentialité</h1>
+        <p class="updated">Dernière mise à jour&nbsp;: 21 août 2026</p>
+      </header>
+
+      <main id="contenu">
+        <p class="intro">Cette politique décrit le traitement des informations dans MatPad, application éducative native pour iPad. Elle concerne uniquement l’application, telle qu’elle est fournie sur iPad.</p>
+
+        <nav class="toc" aria-label="Sommaire">
+          <h2>Sommaire</h2>
+          <ol>
+            <li><a href="#presentation">Présentation</a></li>
+            <li><a href="#editeur">Éditeur et responsable du traitement</a></li>
+            <li><a href="#donnees">Données</a></li>
+            <li><a href="#stockage">Stockage</a></li>
+            <li><a href="#reseau">Réseau</a></li>
+            <li><a href="#tracking">Analytics, publicité et suivi</a></li>
+            <li><a href="#permissions">Permissions</a></li>
+            <li><a href="#export">Export PDF et JPG</a></li>
+            <li><a href="#enfants">Enfants</a></li>
+            <li><a href="#suppression">Suppression</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </nav>
+
+        <article>
+          <section id="presentation">
+            <h2>Présentation</h2>
+            <p>MatPad est une application éducative native pour iPad. Elle permet notamment de travailler avec des opérations mathématiques, des tableaux et des outils associés.</p>
+          </section>
+
+          <section id="editeur">
+            <h2>Éditeur et responsable du traitement</h2>
+            <p>L’éditeur et responsable du traitement est <a href="https://www.lscinformatique.fr" target="_blank" rel="noopener noreferrer">LSC Informatique</a>.</p>
+            <p>Contact&nbsp;: <a href="mailto:contact@lscinformatique.fr">contact@lscinformatique.fr</a></p>
+          </section>
+
+          <section id="donnees">
+            <h2>Données</h2>
+            <p>MatPad&nbsp;:</p>
+            <ul>
+              <li>ne nécessite aucun compte utilisateur&nbsp;;</li>
+              <li>ne collecte aucun nom&nbsp;;</li>
+              <li>ne collecte aucune adresse e-mail&nbsp;;</li>
+              <li>ne collecte aucune localisation&nbsp;;</li>
+              <li>ne collecte pas les contacts&nbsp;;</li>
+              <li>ne collecte pas les photos&nbsp;;</li>
+              <li>ne collecte aucun identifiant publicitaire&nbsp;;</li>
+              <li>ne réalise aucun tracking.</li>
+            </ul>
+            <p>Les nombres saisis dans les opérations mathématiques et les textes saisis dans les tableaux sont traités uniquement localement sur l’iPad.</p>
+            <p>Le texte libre peut contenir une information personnelle si l’utilisateur choisit lui-même d’en saisir une, par exemple un nom. MatPad ne collecte ni n’analyse cette information.</p>
+          </section>
+
+          <section id="stockage">
+            <h2>Stockage</h2>
+            <p>Les données de travail sont conservées uniquement en mémoire pendant l’utilisation.</p>
+            <p>MatPad n’utilise pas de stockage persistant pour ces contenus&nbsp;:</p>
+            <ul>
+              <li>pas de compte&nbsp;;</li>
+              <li>pas de base de données distante&nbsp;;</li>
+              <li>pas d’iCloud&nbsp;;</li>
+              <li>pas de Core Data / SwiftData&nbsp;;</li>
+              <li>pas de Keychain pour ces données&nbsp;;</li>
+              <li>pas de stockage serveur.</li>
+            </ul>
+          </section>
+
+          <section id="reseau">
+            <h2>Réseau</h2>
+            <p>MatPad n’effectue aucun appel réseau pour transmettre les données saisies.</p>
+            <p>Aucune donnée utilisateur n’est envoyée aux serveurs de <a href="https://www.lscinformatique.fr" target="_blank" rel="noopener noreferrer">LSC Informatique</a>.</p>
+          </section>
+
+          <section id="tracking">
+            <h2>Analytics, publicité et suivi</h2>
+            <p>MatPad n’utilise&nbsp;:</p>
+            <ul>
+              <li>aucun SDK publicitaire&nbsp;;</li>
+              <li>aucun service d’analytics&nbsp;;</li>
+              <li>aucun système de suivi utilisateur&nbsp;;</li>
+              <li>aucun identifiant publicitaire&nbsp;;</li>
+              <li>aucun cookie.</li>
+            </ul>
+          </section>
+
+          <section id="permissions">
+            <h2>Permissions</h2>
+            <p>MatPad ne demande pas d’accès&nbsp;:</p>
+            <ul>
+              <li>à la caméra&nbsp;;</li>
+              <li>au microphone&nbsp;;</li>
+              <li>à la localisation&nbsp;;</li>
+              <li>aux contacts&nbsp;;</li>
+              <li>au suivi publicitaire.</li>
+            </ul>
+          </section>
+
+          <section id="export">
+            <h2>Export PDF et JPG</h2>
+            <p>MatPad permet à l’utilisateur de créer volontairement des exports JPG ou PDF.</p>
+            <p>Le fichier est créé localement dans un emplacement temporaire, puis la feuille de partage standard d’iPadOS est affichée.</p>
+            <p>Aucune transmission n’a lieu automatiquement.</p>
+            <p>Une donnée quitte éventuellement l’appareil uniquement lorsque l’utilisateur choisit volontairement une destination via la feuille de partage iPadOS, par exemple Fichiers, Mail ou une autre application.</p>
+            <p><a href="https://www.lscinformatique.fr" target="_blank" rel="noopener noreferrer">LSC Informatique</a> ne reçoit pas automatiquement ces fichiers.</p>
+          </section>
+
+          <section id="enfants">
+            <h2>Enfants</h2>
+            <p>MatPad est une application éducative susceptible d’être utilisée par des enfants.</p>
+            <p>L’application ne demande pas leur identité et ne collecte volontairement aucune donnée personnelle concernant les enfants.</p>
+          </section>
+
+          <section id="suppression">
+            <h2>Suppression</h2>
+            <p>Comme les données de travail ne sont pas envoyées à <a href="https://www.lscinformatique.fr" target="_blank" rel="noopener noreferrer">LSC Informatique</a> et ne sont pas stockées sur un serveur, <a href="https://www.lscinformatique.fr" target="_blank" rel="noopener noreferrer">LSC Informatique</a> ne possède pas de base de données utilisateur à supprimer.</p>
+            <p>Les données de travail locales disparaissent lorsqu’elles sont effacées ou lorsque leur conservation temporaire par l’application prend fin.</p>
+          </section>
+
+          <section id="contact">
+            <h2>Contact</h2>
+            <p>Pour toute question concernant la confidentialité&nbsp;:</p>
+            <div class="card">
+              <p><a href="mailto:contact@lscinformatique.fr">contact@lscinformatique.fr</a></p>
+            </div>
+          </section>
+        </article>
+      </main>
+
+      <footer>
+        <p>MatPad — Politique de confidentialité — <a href="https://www.lscinformatique.fr" target="_blank" rel="noopener noreferrer">LSC Informatique</a> — 21 août 2026</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
